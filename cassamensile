@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cassa mensile</title>
+</head>
+<body>
+    <h1>Flusso cassa mensile</h1>
+    <input type="text" id="valore"> <label>valore</label>
+    <br>
+    <input type="radio" id="più" name="segno" value="+"> <label>+</label>
+    <br>
+    <input type="radio" id="meno" name="segno" value="-"> <label>-</label>
+    <br>
+    <button onclick="inserisci()">inserisci</button>
+    <h3>operazioni effetuate</h3>
+    <div id="area1">
+    </div>
+    <h3>risultato</h3>
+    <div id="area2">
+    </div>
+    <script>
+        let valoreiniziale=Number(prompt("inserire il valore iniziale"))
+        let somma=valoreiniziale;
+        document.getElementById("area1").innerText+=String(valoreiniziale)
+        document.getElementById("area2").innerText+=valoreiniziale
+        function inserisci(){
+            let valore = Number(document.getElementById("valore").value);
+
+            if(document.getElementById("più").checked==true){
+               operazione="+";
+               Number(somma+=valore);
+            }
+            else if(document.getElementById("meno").checked==true){
+               operazione="-";
+               Number(somma-=valore);
+            }
+            document.getElementById("area1").innerText+=String(operazione)
+            document.getElementById("area1").innerText+=String(valore)
+            document.getElementById("area2").innerText=somma
+
+            
+        }
+    </script>
+</body>
+</html>
