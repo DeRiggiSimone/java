@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var persona={ // in un iggetto si possono creare delle proprietà
+            // prima si creano i parametri che vengono considerati string e poi il valore che può essere string, int o boolean
+            nome : 'bernando',
+            eta : 22,
+            single : true,
+             '' : null,
+            3 : 4,
+            // se il nome di un parametro ha uno spazio vuoto si dve scriverlo in un apice
+            'data nascita' : '22042000'
+        };
+        var nome=1;
+        // per stampare un parametro di un oggetto si usa console.log
+        console.log(persona);
+        console.log(persona.nome);
+        // qui non stampa una proprietà ma una variabile
+        console.log(persona[nome]);
+        console.log(persona.eta);
+        // poivhè non capisce che 3 è una stringa parametro bisogna scriverlo tra gli apici
+        console.log(persona['3']);
+
+    </script>
+</body>
+</html>
