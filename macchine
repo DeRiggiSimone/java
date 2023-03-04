@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> macchine in garage </h2>
+    <p id="demo"></p>
+    <script>
+        let car, tipo, modello, colore; // si fanno le variabili per le proprietà
+        let macchine=new Array();
+        for(let i=0;i<3; i++) { // invece di istanziare le proprieta uno alla volta si usa un ciclo for
+            tipo= prompt("tipo");
+            modello= prompt("modello")
+            colore= prompt("colore")
+        car={ // le variabili chieste sono i valori delle proprietà
+            type : tipo,
+            model : modello,
+            colour : colore,
+        }
+        macchine.push(car); // si inserisce l'oggetto nel vettore
+        }
+
+        let tutto=""
+        console.log(macchine.length);
+        for (let i=0; i<macchine.length;i++){ // si usa un ciclo for per stampare tutte le proprietà delle macchine nell'id
+            tutto+="<br>"+ macchine[i].type + " " + macchine[i].model + " " + macchine[i].colour;
+            console.log(macchine[i].type + " " + macchine[i].model + " " + macchine[i].colour); // si stampano tutte le proprietà delle variabili in console.log
+        }
+        document.getElementById("demo").innerHTML+=out;
+        </script>
