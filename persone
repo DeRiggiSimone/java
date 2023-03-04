@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var persona1={nome : 'giovanni',cognome : 'blu',anni : 24,altezza : 174,}; // viene dichiarato l'oggetto persona1 con le proprietà in una sola riga
+        var persona2={ // viene dichiarato l'oggetto persona1 con le proprietà a una riga alla volta
+            nome : 'simone',
+            cognome : 'deriggi',
+            anni : 17,
+            altezza : 184,
+        };
+        var persone=new Array(); // viene creato il vettore per gli oggetti
+        // per stampare gli oggetti con proprieta di un vettore si usa push
+        persone.push(persona1);
+        persone.push(persona2);
+        // per stampare un parametro di un oggetto di un vettore si usa l'indice per specificare
+        console.log(persone[0].nome);
+        console.log(persone[0].cognome);
+        console.log(persone[0].altezza);
+        console.log(persone[1].nome);
+        console.log(persone[1].cognome);
+        console.log(persone[1].altezza);
+
+        for (i=0;i<persone.length;i++){ // per stampare gli oggetti di un vettore con le proprietà si può usare un ciclo for
+            console.log(persone[i].nome);
+            console.log(persone[i].cognome);
+            console.log(persone[i].altezza);
+        }
+        //  si possono cambiare i valori delle proprieta degli oggetti
+        persone[0].nome="marco"
+        persone[0].cognome="abbruzzo"
+        persone[0].altezza="123"
+
+    </script>
+</body>
+</html>
