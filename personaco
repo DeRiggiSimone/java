@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function  persona(nome,cognome,anni,altezza){ // viene usato il costruttore per dichiarare le proprietà della persona
+            this.nome=nome;
+            this.cognome=cognome;
+            this.anni=anni;
+            this.altezza=altezza;
+            this.tutto= function(){ // viene usata una funzione per stampare le proprieta
+                return(this.nome+","+this.cognome+","+this.anni+","+this.altezza);
+            }
+            console.log(this);
+        };
+        var persone=new Array(); // viene creato il vettore per gli oggetti
+        // per inserire gli oggetti con proprieta in un vettore si usa push
+        let a= prompt("nome")
+        let b= prompt("cognome")
+        let c= prompt("anni")
+        let d= prompt("altezza")
+        persona3= new persona(a,b,c,d) // viene creata una nuova persona passando i parametri per le proprieta
+        persone.push("tutto"+persone[2].tutto)
+        console.log(persona2) // viene stampato la seconda persona usando il suo nome
+        console.log(persone[2]) // viene stampato la seconda persona del vettore
+
+    </script>
+</body>
+</html>
