@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function animale(nome){ // per fare un contruttore si deve fare una funzione e volendo si possono usare i parametri
+           // per istanziare le proprieta si usa this.nome della variabile e come risultato si da il valore voluto 
+          this.nome=nome || 'non definito';
+          this.tipo='animale';
+          tipo.habitat='terra';  
+        
+}
+//si istanzia un valore con proprietà utilizzando il new
+var cane= new animale('cane');
+console.log(habitat); // viene stampato il valore della proprietà senza riferirsi all'oggetto
+console.log(window.habitat); // viene stampato il valore della proprietà utilizzando window
+console.log(cane.nome); // viene stampato il valore della proprietà con riferimento di un oggetto specifico
+    </script>
+</body>
+</html>
