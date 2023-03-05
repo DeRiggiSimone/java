@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> macchine in garage </h2>
+    <p id="demo"></p>
+    <script>
+        function  macchina(marca, modello, colore, anno, targa){ // viene usato il costruttore per dichiarare le proprietà della persona
+            this.marca=marca;
+            this.modello=modello;
+            this.colore=colore;
+            this.anno=anno;
+            this.targa=targa;
+            this.tutto= function(){ // viene usata una funzione per stampare le proprieta
+                return(this.nome+","+this.modello+","+this.colore+","+this.anno+","+this.targa);
+            }
+            console.log(this);
+        };
+        let marca, modello, colore, anno, targa; // si fanno le variabili per le proprietà
+        let macchine=new Array();
+        marca= prompt("marca");
+        modello= prompt("modello")
+        colore= prompt("colore")
+        anno= prompt("anno");
+        targa= prompt("targa");
+        car=new macchina( marca, modello, colore, anno, targa)
+        macchine.push(car); // si inserisce l'oggetto nel vettore
+        console.log(macchine[0].tutto)
+        </script>
+
